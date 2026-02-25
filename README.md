@@ -14,7 +14,8 @@ Applicazioni full-stack con backend **Node.js / Express.js** + **SQLite** e fron
 |----------|-------------|-------|
 | [Carroponte](carroponte/) | Gestione spettacoli teatrali/eventi | Express.js, SQLite, Angular, HttpClient |
 | [Sadder](sadder/) | Gestione persone con coordinate canvas | Express.js, SQLite, Angular, Observable |
-| [SBB](SBB/) | Gestione ospiti B&B completo | Express.js, SQLite, Angular, CRUD |
+| [SBB V01](SBB_V01/) | Gestione ospiti B&B — CRUD completo con seed | Express.js, SQLite, Angular, CRUD |
+| [SBB V02](SBB_V02/) | B&B evoluto — prenotazioni, stanze, utenti, routing | Angular, HttpClient, Router, entità multiple |
 | [CityRender](CityRender/) | API città italiane (pesate su popolazione) | Express.js, CORS |
 | [RandomDataGenerator](RandomDataGenerator/) | Generatore dati anagrafici italiani | Node.js, algoritmi pesati |
 
@@ -63,7 +64,7 @@ progetto/
 
 ---
 
-### SBB — Superior Bed & Breakfast
+### SBB V01 — Superior Bed & Breakfast (versione base)
 
 Full-stack completo per gestione ospiti B&B.
 
@@ -74,7 +75,22 @@ Full-stack completo per gestione ospiti B&B.
 | **Entità** | `Guest` (firstName, lastName, ssn, dob, address, city) |
 | **API** | CRUD completo: `GET`, `POST`, `DELETE /api/guests` |
 | **Seed** | Generazione automatica ~6000 ospiti italiani |
-| **Dettagli** | [Backend](SBB/SBBSuperiorBedAndBreakfastgBackend/) · [Frontend](SBB/SBBSuperiorBedAndBreakfastgFrontend/) |
+| **Dettagli** | [README](SBB_V01/README.md) · [Backend](SBB_V01/SBBSuperiorBedAndBreakfastgBackend/) · [Frontend](SBB_V01/SBBSuperiorBedAndBreakfastgFrontend/) |
+
+---
+
+### SBB V02 — Superior Bed & Breakfast (versione evoluta)
+
+Frontend Angular evoluto con modello dati esteso, routing e componenti aggiuntivi.
+
+| | |
+|---|---|
+| **Frontend** | Angular 21 + HttpClient + Router |
+| **Entità** | `Guest`, `Room`, `Booking`, `Hotel`, `User` |
+| **Servizi** | GuestService, RoomService, BookingService, CityService, UserService |
+| **Route** | `/arrivals` → TodayArrivals, `/refund` → RefundCalculator |
+| **Componenti** | GuestSearch, GuestPreview, GuestPicker, CityInput, TopMenu, TodayArrivals, RefundCalculator |
+| **Dettagli** | [README](SBB_V02/README.md) |
 
 ---
 
