@@ -1,0 +1,15 @@
+Cognome
+<!-- [(ngModel)] fa il two-way binding: aggiorna lastName mentre l'utente digita -->
+<input type="text" [(ngModel)]="lastName" />
+<!-- la ricerca parte solo al click, come richiesto dall'esercizio -->
+<input type="button" value="Search" (click)="search()" />
+
+<!-- mostro la lista solo se ci sono risultati -->
+@if (results().length > 0) {
+    <ul>
+        <!-- uso track guest.id per permettere ad Angular di identificare ogni elemento in modo univoco -->
+        @for (guest of results(); track guest.id) {
+            <li>{{ guest.firstName }} {{ guest.lastName }} - {{ guest.ssn }}</li>
+        }
+    </ul>
+}

@@ -1,0 +1,19 @@
+/* App component styles */
+
+:host {
+  display: block;
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+app-guest-check-in,
+app-guest-search {
+  display: block;
+  background-color: #fff;
+  border: 1px solid #e0cdb8;
+  border-radius: 8px;
+  padding: 24px;
+  margin-bottom: 24px;
+  box-shadow: 0 2px 6px rgba(107, 66, 38, 0.08);
+}

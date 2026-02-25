@@ -1,0 +1,38 @@
+@if(!confirm()){
+    <form>
+        Codice fiscale (SSN):
+        <input type="text" name="ssn" [(ngModel)]="ssn" (blur)="checkPresent()" />
+        @if(notFound()){
+            <div> Codice fiscale non presente </div>        
+            <input type="button" value="Registra nuovo ospite" (click)="confirmSsn()"/>
+        }
+    </form>
+}
+@if(!notFound() && !confirm()){
+    <div>
+        {{guest.firstName}}  {{guest.lastName}}
+    </div>
+}
+
+@if(confirm() && notFound())
+{
+    <form #form1="ngForm">
+        Codice fiscale
+        <input type="text" name="ssn" readonly [value]="guest.ssn" />
+        Nome 
+        <input type="text" name="firstName" required [(ngModel)]="guest.firstName" />
+        Cognome
+        <input type="text" name="lastName" required [(ngModel)]="guest.lastName" />
+        Data di nascita 
+        <input type="date" name="dob" required [(ngModel)]="guest.dob" />
+        Address 
+        <input type="text" name="address" required [(ngModel)]="guest.address" />
+        City 
+        <input type="text" name="city" required [(ngModel)]="guest.city" />
+        
+        <input type="button" [disabled]="!form1.valid && !isLoading()" value="save" (click)="send()" />
+
+        {{operationMessage()}}
+
+    </form>
+}

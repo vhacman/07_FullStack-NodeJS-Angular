@@ -1,0 +1,12 @@
+<input type="button" value="test" 
+(click)="load1()" />
+
+@if(person()==null){
+    <div> Loading </div>
+}
+@if(person()!=null){
+    <div> {{person()!.id}} {{person()!.firstname}} {{person()!.lastname}} </div>
+}
+@if(errorMessage()!=null){
+    <div> {{errorMessage()}} </div>
+}

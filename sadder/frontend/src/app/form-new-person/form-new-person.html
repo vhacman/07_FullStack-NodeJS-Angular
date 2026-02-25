@@ -1,0 +1,15 @@
+<form>
+    Name
+    <input type="text" name="name" [(ngModel)]="person.name" /> <br />
+    Surname
+    <input type="text" name="surname" [(ngModel)]="person.surname" /> <br />
+    Birthdate
+    <input type="date" name="birthdate" [(ngModel)]="person.birthdate" /> <br />
+    X
+    <input type="number" name="x" [(ngModel)]="person.x" /> <br />
+    Y
+    <input type="number" name="y" [(ngModel)]="person.y" /> <br />
+
+    <input type="button" value="save" (click)="savePerson()" />
+
+</form>
