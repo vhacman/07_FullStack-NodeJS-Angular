@@ -1,6 +1,6 @@
 <div align="center">
 
-# 08 — FullStack JS + Angular
+# 07 — FullStack JS + Angular
 
 Applicazioni full-stack con backend **Node.js / Express.js** + **SQLite** e frontend **Angular 21**.
 
